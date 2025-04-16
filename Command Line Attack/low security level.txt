@@ -1,0 +1,3 @@
+;pwd
+; pwd ; cd ~ ; cd /usr/share/dvwa; ls
+; pwd ; cd ~ ; cd /usr/share/dvwa; cat README.md
