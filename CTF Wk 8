@@ -1,4 +1,5 @@
 CTF – Buffer overflow
+sudo sysctl -w kernel.randomize_va_space=0
 Task:
 A. using the following C application:
 #include <stdlib.h>
