@@ -62,3 +62,7 @@ sudo dpkg -i kali-archive-keyring_2024.1_all.deb
 rm kali-archive-keyring_2024.1_all.deb
 # update
 sudo apt-get update
+
+sudo apt install gcc-multilib
+
+
