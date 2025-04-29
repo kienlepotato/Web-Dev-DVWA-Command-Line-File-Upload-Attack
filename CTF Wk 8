@@ -1,0 +1,32 @@
+CTF – Buffer overflow
+Task:
+A. using the following C application:
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+void winner()
+{
+ printf("flow changed\n");
+}
+int main(int argc, char **argv)
+{
+ char buffer[50];
+ gets(buffer);
+ printf("exit\n");
+}
+Compile this application and perform a buffer overflow to cause execution of the winner() function.
+B. Using the following application:
+#include <stdio.h>
+#include <string.h>
+int main (int argc, char** argv){
+ //Make a buffer make this bigger than the minimum you will need
+ //You will want to make this large enough to fit shell code and lots of nops
+ char buffer[500];
+ //copy cmdline input into the buffer.
+ strcpy(buffer, argv[1]);
+ //return 0 because that is what we do if stuff exits normally.
+ return 0;
+}
+Execute some shell code to gain a shell as the user who the code is executed as.
+C.
+Write up what you have done, how you did it and what protections exist to make it hard to do. 
