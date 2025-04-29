@@ -52,3 +52,13 @@ sudo wget https://archive.kali.org/archive-key.asc -O /etc/apt/trusted.gpg.d/kal
 If you have a missing public key replace F6BC with the key you need:
 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys F6BC
+
+Issue resolved, i used below the steps
+
+gpg --keyserver keyserver.ubuntu.com --recv-key 67ECE5605BCF1346
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 67ECE5605BCF1346
+sudo gpg -a --export 67ECE5605BCF1346 | sudo apt-key add -
+apt-get update
+sudo apt full-upgrade -y
+
+Thanks for the support
