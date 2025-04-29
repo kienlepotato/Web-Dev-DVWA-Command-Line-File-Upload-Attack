@@ -30,3 +30,14 @@ int main (int argc, char** argv){
 Execute some shell code to gain a shell as the user who the code is executed as.
 C.
 Write up what you have done, how you did it and what protections exist to make it hard to do. 
+
+
+Findin the offset can be easy
+● Metasplot has a pattern-create tool.
+● Download it from github.
+● https://raw.githubusercontent.com/rapid7/metasploit-framewor
+k/master/tools/exploit/pattern_create.rb
+● You need ruby to run this.
+● gem install reg-text
+● ruby ./pattern_create.rb -l 1000
+● You can then use the sister script to find the pos
