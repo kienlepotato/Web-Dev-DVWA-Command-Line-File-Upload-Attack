@@ -65,4 +65,6 @@ sudo apt-get update
 
 sudo apt install gcc-multilib
 
+gcc -m32 -fno-stack-protector -z execstack -Wno-implicit-function-declaration -o badcode bad.c
+
 
