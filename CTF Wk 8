@@ -41,3 +41,5 @@ k/master/tools/exploit/pattern_create.rb
 ● gem install reg-text
 ● ruby ./pattern_create.rb -l 1000
 ● You can then use the sister script to find the pos
+
+gcc -m32 -fno-stack-protector -z execstack -nopie -g bad.c -o badcode 
