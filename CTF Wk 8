@@ -1,3 +1,11 @@
+If you have a problem with these instructions and apt failing because of keys. 
+
+sudo wget https://archive.kali.org/archive-key.asc -O /etc/apt/trusted.gpg.d/kali-archive-keyring.asc
+
+If you have a missing public key replace F6BC with the key you need:
+
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys F6BC
+
 CTF – Buffer overflow
 sudo sysctl -w kernel.randomize_va_space=0
 gcc -m32 -fno-stack-protector -z execstack -no-pie -g -Wno-implicit-function-declaration bad.c -o badcode
