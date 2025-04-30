@@ -127,4 +127,6 @@ python2.7 -c "print('A'*72 + '\x9d\x11\x00\x00\x00\x00\x00\x00')" | ./badcode.ex
 
 gcc -m32 -fno-stack-protector -z execstack -nopie -g -Wno-implicit-function-declaration bad.c -o badcode
 
+sudo apt install build-essential cmake gcc-multilib g++-multilib libjpeg-dev:i386 libpng-dev:i386 zlib1g-dev:i386 libsdl2-dev:i386
+
 
