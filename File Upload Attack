@@ -3,8 +3,43 @@ Step 1. Acquire a PHP Webshell Payload
 https://github.com/artyuum/simple-php-web-shell/blob/master/index.php 
 
 Step 2. Start DVWA in Terminal
-start-dvwa
+dvwa-start
 
-Step3 Set Security + Reset Databse
+Step 3 Set Security To Low+ Reset Databse
 
-Step 4: Perform Fileupload
+Step 4: Perform File upload
+
+Step 5: Go to URL where shell is stored
+
+Commands to try:
+uname -a
+whoami
+ifconfig
+
+Step 6: Go To Burpsuite and open DVWA browser in Proxy
+
+Step 7: Turn Off Interceptor
+
+Step 8: Set Security to medium + Reset databse
+
+Step 9: Turn on interceptor
+
+Step 10: Try to upload index.php
+
+Step 11: Turn Off intercept and Send to Repeater
+
+Step 12: Change Content-Type :application/x-php to --> imamge/jpeg
+
+Step 13: Hit Send
+
+Step 13: Go to URL and execute shell
+
+Commands to try:
+uname -a
+whoami
+ifconfig
+
+Step14:
+
+|mv ../../hackable/uploads/index.jpg ../../hackable/uploads/index.ph 
+
