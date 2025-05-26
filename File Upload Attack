@@ -41,5 +41,7 @@ ifconfig
 
 Step14:
 
+add: GIF89a
+
 |mv ../../hackable/uploads/index.jpg ../../hackable/uploads/index.ph 
 
