@@ -1,0 +1,10 @@
+
+Step 1. Acquire a PHP Webshell Payload
+https://github.com/artyuum/simple-php-web-shell/blob/master/index.php 
+
+Step 2. Start DVWA in Terminal
+start-dvwa
+
+Step3 Set Security + Reset Databse
+
+Step 4: Perform Fileupload
