@@ -1,6 +1,9 @@
 ;pwd
 ; pwd ; cd ~ ; cd /usr/share/dvwa; ls
 ; pwd ; cd ~ ; cd /usr/share/dvwa; cat README.md
-
+LOW
+;cat /usr/share/dvwa/README.md
+MEDIUM
 | cat /usr/share/dvwa/README.md
+HIGH
 |cat /usr/share/dvwa/README.md
